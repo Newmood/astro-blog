@@ -1,0 +1,53 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} | Projects`} description={SITE_DESCRIPTION} />
+
+        <style>
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background: aliceblue;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                width: calc(100% - 2rem);
+                box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+            }
+        </style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1> VVIP's Projects!</h1>
+			<p>
+				View some collaborative and hobby projects we made together.
+			</p>
+
+            <ul>
+                <li> <div>
+                        <h2> Boo ! </h2>
+                        <p>
+                            Boo is a discord chat bot that supports natural language input like ChatGPT and also understand images.
+                        </p>
+                        <a href="https://github.com/VVIP-Kitchen/boo" target="_blank"> Check out Boo!</a>
+                    </div>
+                </li>
+            </ul>
+
+		</main>
+		<Footer />
+	</body>
+</html>
