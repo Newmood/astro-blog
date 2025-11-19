@@ -18,6 +18,8 @@ const posts = (await getCollection('blog')).sort(
 		<style>
 			main {
 				width: 960px;
+				max-width: calc(100% - 2rem); /* Allow it to shrink on small screens */
+				margin: 0 auto; /* Center the container */
 			}
 			ul {
 				display: flex;
@@ -48,6 +50,8 @@ const posts = (await getCollection('blog')).sort(
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
+				height: auto; /* Ensure aspect ratio is preserved */
+				width: 100%;  /* Ensure image fits within the responsive card */
 			}
 			ul li a {
 				display: block;

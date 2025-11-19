@@ -9,18 +9,76 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.placeholder-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				min-height: 60vh;
+				gap: 1.5rem;
+			}
+			.logo-text {
+				font-size: 4rem;
+				font-weight: 800;
+				margin: 0;
+				background: -webkit-linear-gradient(0deg, #fff, var(--accent));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				line-height: 1.1;
+			}
+			.subtitle {
+				font-size: 1.25rem;
+				color: var(--text-muted);
+				max-width: 600px;
+				margin: 0;
+			}
+			.cta-button {
+				margin-top: 1rem;
+				display: inline-block;
+				padding: 0.8rem 1.5rem;
+				background: var(--accent);
+				color: var(--background);
+				font-weight: bold;
+				border-radius: 999px;
+				text-decoration: none;
+				transition: transform 0.2s, opacity 0.2s;
+			}
+			.cta-button:hover {
+				transform: scale(1.05);
+				opacity: 0.9;
+				text-decoration: none;
+				color: var(--background);
+			}
+			@media (max-width: 600px) {
+				.logo-text {
+					font-size: 2.5rem; /* Scale down from 4rem */
+				}
+				.subtitle {
+					font-size: 1rem;
+					padding: 0 1rem;
+				}
+				.placeholder-container {
+					min-height: 50vh; /* Reduce height on mobile */
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1> Welcome to VVIP Kitchen!</h1>
-			<p>
-				Welcome to the official website of VVIP Kitchen, where we share blogs, projects and resources made by us in our happy little corner of the internet. We are, (for the most part) passionate about Data Science and shenanigans!
-			</p>
-
-			<p> More to come in future, stay tuned! </p>
-			
-
+			<div class="placeholder-container">
+				<h1 class="logo-text">VVIP Kitchen</h1>
+				<p class="subtitle">
+					Cooking up code, data science, and shenanigans. <br/>
+					Our new website is currently under construction.
+				</p>
+				
+				<a href="https://github.com/VVIP-Kitchen" target="_blank" class="cta-button">
+					Visit our GitHub
+				</a>
+			</div>
 		</main>
 		<Footer />
 	</body>

@@ -1,0 +1,9 @@
+[tools]
+bun = "latest"
+
+[tasks."web:dev"]
+description = "Run the Astro app locally"
+run = """
+bun install
+bun run dev
+"""
